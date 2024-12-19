@@ -6,13 +6,17 @@ const Shop = require("./models/shop")
 
 const cors = require("cors")
 
+const dotenv = require("dotenv")
+
+dotenv.config()
+
 
 
 connection()
 
 
 const app = express()
-const PORT = 1942
+const PORT = process.env.PORT || 8000
 
 
 app.use(cors())
